@@ -1,7 +1,6 @@
 package com.rrjm.texfieldadvance
 
 import android.os.Bundle
-import android.provider.CalendarContract.Colors
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rrjm.texfieldadvance.ui.theme.TexFieldAdvanceTheme
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
@@ -75,8 +73,6 @@ fun MyTexFieldAdvance() {
 fun MyTextFieldOutLine() {
     // Declaramos una variable mutable para almacenar el texto ingresado en el primer TextField
     var myText1 by remember { mutableStateOf("") }
-    // Declaramos una segunda variable mutable para almacenar el texto ingresado en el segundo TextField
-    var myText2 by remember { mutableStateOf("") }
 
     OutlinedTextField(
         value = myText1,
@@ -84,8 +80,8 @@ fun MyTextFieldOutLine() {
         modifier = Modifier.padding(24.dp),
         label = { Text(text = "Introduce un texto") },
         colors = OutlinedTextFieldDefaults.colors(
-            focusedBorderColor = Color.Magenta,
-            unfocusedBorderColor = Color.Blue
+            focusedBorderColor = Color.Magenta,//Cambia el color del borde
+            unfocusedBorderColor = Color.Blue//Cambia el color del borde
 
         )
 
